@@ -52,12 +52,12 @@ public class FreeSignupPage extends Base_Class{
 		pnNumber.sendKeys(prop.getProperty("phnumber"));
 		passwrd.sendKeys(prop.getProperty("passwrd"));
 		takescreen("valid phNumber and Password credential");
-		
+		/*
 		//with invalid phNumber and Password credential:
-		//pnNumber.sendKeys(prop.getProperty("InvalidPhNumber"));
-		//passwrd.sendKeys(prop.getProperty("Invalidpasswrd"));
-		//takescreen("invalid phNumber and Password credential");
-		
+		pnNumber.sendKeys(prop.getProperty("InvalidPhNumber"));
+		passwrd.sendKeys(prop.getProperty("Invalidpasswrd"));
+		takescreen("invalid phNumber and Password credential");
+		*/
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,500);");
 		createAccBtn.click();
@@ -73,7 +73,19 @@ public class FreeSignupPage extends Base_Class{
 		takescreen("website page with valid entered details");
 		nextBtn.click();
 		Thread.sleep(6000);
-		
+		/*
+		//without website name:
+		JavascriptExecutor js1=(JavascriptExecutor) driver;
+		js1.executeScript("window.scrollBy(0,300);");
+		//websiteName.sendKeys(prop.getProperty("websitename"));
+		selectTraffic.click();
+		selectNotsure.click();
+		selectIndustry.click();
+		selectSoftware.click();
+		nextBtn.click();
+		takescreen("website page without website name");
+		Thread.sleep(6000);
+		*/
 		product.click();
 		takescreen("added free product");
 		JavascriptExecutor js2=(JavascriptExecutor) driver;

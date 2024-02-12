@@ -2,6 +2,7 @@ package TestPages;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -42,7 +43,7 @@ public class Test_BlockAccPage extends Base_Class {
 	
   }
 
-  //@AfterMethod
+  @AfterMethod
   public void closeBrowser() throws InterruptedException {
 		browserClose();
   }

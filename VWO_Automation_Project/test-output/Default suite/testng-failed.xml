@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPages.Test_BlockAccPage">
+      <class name="TestPages.Test_FreeSignupPage">
         <methods>
-          <include name="VerifyBlockAccPage"/>
+          <include name="TestFreeSignupPage"/>
           <include name="openbrowser"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- TestPages.Test_BlockAccPage -->
+      </class> <!-- TestPages.Test_FreeSignupPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

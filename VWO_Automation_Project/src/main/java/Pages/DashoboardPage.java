@@ -22,6 +22,8 @@ public class DashoboardPage extends Base_Class{
 	@FindBy(xpath = "//button[@vwo-async-click='vm.createCampaign()']")WebElement createBtn;
 	
 	public void VerifyDashboard() throws Throwable {
+		
+		//with campaign name
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,300);");
 		popup.click();
@@ -32,6 +34,20 @@ public class DashoboardPage extends Base_Class{
 		takescreen("create campaign name");
 		createBtn.click();
 		Thread.sleep(6000);
+		
+		/*
+		//without campaign name:
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,300);");
+		popup.click();
+		createtestBtn.click();
+		takescreen("dashboard page");
+		campaignnameBtn.clear();
+		//campaignnameBtn.sendKeys(prop.getProperty("campaignName"));
+		createBtn.click();
+		takescreen("without campaign name");
+		Thread.sleep(6000);
+		*/
 }
 }
 

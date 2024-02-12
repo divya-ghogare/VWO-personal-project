@@ -5,18 +5,12 @@ import java.io.IOException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
+import Base_Class.Base_Class;
 import Pages.LoginPage;
-import Reports.Extent_Report;
 
-public class Test_LoginPage extends Extent_Report{
+public class Test_LoginPage extends Base_Class{
 	LoginPage Login;
-	public ExtentReports rep;
-	public ExtentTest test;
+	
   public Test_LoginPage() throws IOException {
 		super();
 	}
@@ -25,9 +19,6 @@ public class Test_LoginPage extends Extent_Report{
   public void OpenBrowser() throws IOException {
 	initialbrowser();
 	Login=new LoginPage();
-	rep=new ExtentReports();
-	test=rep.createTest("VerifyLogin");
-
   }
 
 @AfterMethod
@@ -38,8 +29,7 @@ public void closeBrowser() throws InterruptedException {
 @Test
 public void TestLogin() throws Throwable {
 	Login.VerifyLogin();
-	test=rep.createTest("VWO login");
-	  test.log(Status.INFO, "entered automation testing");
+	
 }
 
 /*
